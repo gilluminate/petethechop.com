@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{http_host} ^www.petethechop.com [nc]
+RewriteRule ^(.*) http://petethechop.com/$1 [r=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .? http://petethechop.com/ [R=301,L]
